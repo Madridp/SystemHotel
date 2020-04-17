@@ -15,8 +15,6 @@ class CreatePagoReservacionsTable extends Migration
     {
         Schema::create('pago_reservacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->float('total_pago');
             $table->date('fecha_pago');
             $table->unsignedBigInteger('id_reservacion');

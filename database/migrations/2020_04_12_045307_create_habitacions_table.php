@@ -15,13 +15,11 @@ class CreateHabitacionsTable extends Migration
     {
         Schema::create('habitacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->integer('disponibilidad')->default(1);
             $table->unsignedBigInteger('id_tipo_habitacion');
             $table->unsignedBigInteger('id_disponibilidad');
             $table->unsignedBigInteger('id_reservacion_habitacion');
-            
+
             $table->foreign('id_tipo_habitacion')
                 ->references('id')->on('tipo_habitacions');
             $table->foreign('id_disponibilidad')

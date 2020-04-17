@@ -15,14 +15,12 @@ class CreateReservacionServiciosTable extends Migration
     {
         Schema::create('reservacion_servicios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->string('descripcion', 100);
             $table->float('costo');
             $table->integer('estado')->default(1);
             $table->unsignedBigInteger('id_servicio');
             $table->unsignedBigInteger('id_reservacion');
-            
+
             $table->foreign('id_servicio')
                 ->references('id')->on('servicios');
             $table->foreign('id_reservacion')

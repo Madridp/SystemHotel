@@ -15,12 +15,10 @@ class CreateTipoHabitacionsTable extends Migration
     {
         Schema::create('tipo_habitacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->string('descripcion', 100);
             $table->float('costo');
             $table->integer('estado')->default(1);
-            
+
         });
     }
 
