@@ -15,8 +15,6 @@ class CreateDisponibilidadsTable extends Migration
     {
         Schema::create('disponibilidads', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->string('descripcion', 100);
             $table->integer('estado')->default(1);
 

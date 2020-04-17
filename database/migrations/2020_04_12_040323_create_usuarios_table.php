@@ -15,8 +15,6 @@ class CreateUsuariosTable extends Migration
     {
         Schema::create('usuarios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->string('nombre', 100);
             $table->string('apellido', 100);
             $table->string('direccion', 100);
@@ -26,7 +24,7 @@ class CreateUsuariosTable extends Migration
 
             $table->foreign('id_rol')
                 ->references('id')->on('rols');
-                
+
         });
     }
 

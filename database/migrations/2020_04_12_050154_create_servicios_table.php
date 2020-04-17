@@ -15,8 +15,6 @@ class CreateServiciosTable extends Migration
     {
         Schema::create('servicios', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->string('nombre', 100);
             $table->float('costo_unitario');
             $table->float('costo_total');

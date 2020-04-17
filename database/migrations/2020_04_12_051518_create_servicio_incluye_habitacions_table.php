@@ -15,8 +15,6 @@ class CreateServicioIncluyeHabitacionsTable extends Migration
     {
         Schema::create('servicio_incluye_habitacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->unsignedBigInteger('id_servicio');
             $table->unsignedBigInteger('id_tipo_habitacion');
 

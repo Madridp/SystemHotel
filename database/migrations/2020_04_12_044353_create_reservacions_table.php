@@ -15,8 +15,6 @@ class CreateReservacionsTable extends Migration
     {
         Schema::create('reservacions', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->timestamp('created_at')->useCurrent(); 
-            $table->timestamp('updated_at')->useCurrent();
             $table->date('fecha_reserva');
             $table->date('fecha_ingreso');
             $table->date('fecha_salida');
