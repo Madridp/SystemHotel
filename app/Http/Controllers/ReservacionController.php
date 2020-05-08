@@ -14,7 +14,8 @@ class ReservacionController extends Controller
      */
     public function index()
     {
-        //
+        #referencia a la ruta que se va ir
+        return view('reservacion.index');
     }
 
     /**
@@ -24,7 +25,8 @@ class ReservacionController extends Controller
      */
     public function create()
     {
-        //
+        #referencia a la ruta que se va ir
+        return view('reservacion.crear');
     }
 
     /**

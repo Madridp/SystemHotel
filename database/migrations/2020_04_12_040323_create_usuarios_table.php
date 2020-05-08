@@ -20,7 +20,7 @@ class CreateUsuariosTable extends Migration
             $table->string('direccion', 100);
             $table->string('email', 100);
             $table->integer('estado')->default(1);
-            $table->unsignedBigInteger('id_rol');
+            $table->unsignedBigInteger('id_rol')->nullable();
 
             $table->foreign('id_rol')
                 ->references('id')->on('rols');
