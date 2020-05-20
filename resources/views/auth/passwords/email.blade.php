@@ -1,19 +1,40 @@
 @extends('layouts.auth')
 
 @section('main-content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-xl-10 col-lg-12 col-md-9">
-            <div class="card o-hidden border-0 shadow-lg my-5">
-                <div class="card-body p-0">
-                    <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-password-image"></div>
-                        <div class="col-lg-6">
-                            <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">{{ __('Reset Password') }}</h1>
-                                </div>
+<style>
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    #login {
+        
+        padding: 11em;
+        
+}
+</style>
+<div class="container" id="login">
 
+    <div class="row justify-content-center">
+        <div class="card-body flex-center">
+                                
+            <img src="../img/lock.png" width="200" height="200">
+            
+            
+        </div> 
+        <div class="col-xl-6 col-lg-8 col-md-6">
+            <div class="card o-hidden border-2 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <div class="row flex-center">
+                        
+                        <div class="col-lg-11">
+                            <div class="p-4">
+                                <div class="text-center">
+                                    <h1 style="
+                                    FONT-SIZE: 15pt; FONT-FAMILY: Comic Sans MS;
+                                    ">{{ __('Resetear Contraseña') }}</h1>
+                                </div>
+                                <hr>
                                 @if ($errors->any())
                                     <div class="alert alert-danger border-left-danger" role="alert">
                                         <ul class="pl-4 my-2">
@@ -34,15 +55,23 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="{{ old('email') }}" required>
+                                        <input  style="
+                                        FONT-SIZE: 10pt;"type="text" class="form-control form-control-user" name="email" placeholder="{{ __('Direccion de correo electrónico') }}" value="{{ old('email') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            {{ __('Send Password Reset Link') }}
+                                        <button type="submit" class="btn btn-primary btn-user btn-block" style="
+                                        FONT-SIZE: 10pt;">
+                                            {{ __('Enviar enlace de restablecimiento de contraseña') }}
                                         </button>
                                     </div>
                                 </form>
+                                    <div class="form-group text-center" style="
+                                    FONT-SIZE: 9pt; FONT-FAMILY: Arial;
+                                    " >
+                                        <a href="{{ route('login') }}">Iniciar Sesión</a>
+                                    </div>
+                                
                             </div>
                         </div>
                     </div>

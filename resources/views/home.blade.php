@@ -1,9 +1,29 @@
 @extends('layouts.admin')
 
+<style>
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    #login {
+            
+            padding: 10em;
+            
+    }
+    #font{
+        font-size: 18px;
+    }
+
+    .confondo {
+   background-color: rgb(26, 218, 99);
+   border-radius: 5px;
+ }
+    </style>
 @section('main-content')
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-4 text-gray-800">{{ __('Principal') }}</h1>
+    <h1 class="h3 mb-4 text-gray-800">{{ __('Menú Principal') }}</h1>
 
     <div class="alert alert-success border-left-success alert-dismissible fade show" role="alert">
         Habitaciones disponibles, reservadas y ocupadas!
@@ -19,50 +39,84 @@
     @endif
 
 
-
             <!-- Creando el primer enlace -->
             <div style="height: 400px; ">
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -1 </a>
+                
+                <a id=boton1 class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                    <img src="../img/bed.png" width="80" height="80"> Habitacion -1 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -2 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -3 </a>
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -2 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -4 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -5 </a>
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -3 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -6 </a>
                      &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -7 </a>
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -4 </a>    
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     <br> <br>  <!-- Salto de linea -->
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -5 </a>
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -6 </a>
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -7 </a>
+                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -8 </a>
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
                     <br> <br>  <!-- Salto de linea -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -8 </a>
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion -9 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion -9 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 10 </a>
+                    <a class="btn btn-info btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 10 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 11 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 12 </a>
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 11 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 11 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 13 </a>
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 12 </a>
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
                     <br> <br>  <!-- Salto de linea -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 14 </a>
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 13 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 15 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 16 </a>
+                    <a class="btn btn-danger btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 14 </a>
+                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
+                        <img src="../img/bed.png" width="80" height="80"> Habitacion 15 </a>
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 17 </a>
+               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 15 </a-->
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 18 </a>
+               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 16 </a-->
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 19 </a>
+               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 17 </a-->
                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 18 </a-->
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+                <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 19 </a-->
+                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
+            
             </div>
+            
 
 
             <!-- <form method="POST" action="{{ route('register') }}" class="user">

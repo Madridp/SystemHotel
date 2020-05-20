@@ -1,17 +1,41 @@
 @extends('layouts.auth')
 
 @section('main-content')
-<div class="container">
+<style>
+    .flex-center {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    #login {
+            
+            padding: 10em;
+            
+    }
+    #font{
+        font-size: 18px;
+    }
+    
+    </style>
+<div class="container" id="login">
     <div class="row justify-content-center">
-        <div class="col-xl-10 col-lg-12 col-md-9">
+        <div class="card-body flex-center">
+                                
+            <img src="../img/registrar.png" width="250" height="250">
+            
+            
+        </div>
+        <div class="col-xl-6 col-lg-8 col-md-6">
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
-                    <div class="row">
-                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
-                        <div class="col-lg-6">
+                    <div class="row flex-center">
+                        
+                        <div class="col-lg-11">
                             <div class="p-5">
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">{{ __('Register') }}</h1>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading text-center">
+                                        <h1>Sistema Hotel</h1>
+                                    </div>    
                                 </div>
 
                                 @if ($errors->any())
@@ -28,28 +52,34 @@
                                     <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="name" placeholder="{{ __('Name') }}" value="{{ old('name') }}" required autofocus>
+                                        <input style="
+                                        FONT-SIZE: 10pt;"type="text" class="form-control form-control-user" name="name" placeholder="{{ __('Nombre') }}" value="{{ old('name') }}" required autofocus>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="text" class="form-control form-control-user" name="last_name" placeholder="{{ __('Last Name') }}" value="{{ old('last_name') }}" required>
+                                        <input style="
+                                        FONT-SIZE: 10pt;"type="text" class="form-control form-control-user" name="last_name" placeholder="{{ __('Apellido') }}" value="{{ old('last_name') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="email" class="form-control form-control-user" name="email" placeholder="{{ __('E-Mail Address') }}" value="{{ old('email') }}" required>
+                                        <input style="
+                                        FONT-SIZE: 10pt;" type="email" class="form-control form-control-user" name="email" placeholder="{{ __('Dirección de correo electrónico') }}" value="{{ old('email') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" name="password" placeholder="{{ __('Password') }}" required>
+                                        <input style="
+                                        FONT-SIZE: 10pt;"type="password" class="form-control form-control-user" name="password" placeholder="{{ __('Contraseña') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <input type="password" class="form-control form-control-user" name="password_confirmation" placeholder="{{ __('Confirm Password') }}" required>
+                                        <input style="
+                                        FONT-SIZE: 10pt;" type="password" class="form-control form-control-user" name="password_confirmation" placeholder="{{ __('Confirmar Contraseña') }}" required>
                                     </div>
 
                                     <div class="form-group">
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">
-                                            {{ __('Register') }}
+                                        <button style="
+                                        FONT-SIZE: 10pt;" type="submit" class="btn btn-primary btn-user btn-block">
+                                            {{ __('Registrar') }}
                                         </button>
                                     </div>
                                 </form>
@@ -57,8 +87,9 @@
                                 <hr>
 
                                 <div class="text-center">
-                                    <a class="small" href="{{ route('login') }}">
-                                        {{ __('Already have an account? Login!') }}
+                                    <a style="
+                                    FONT-SIZE: 9pt;" class="small" href="{{ route('login') }}">
+                                        {{ __('¿Ya tienes una cuenta? ¡Iniciar sesión!') }}
                                     </a>
                                 </div>
                             </div>
