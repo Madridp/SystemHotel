@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Cliente;
 use App\Reservacion;
 use Illuminate\Http\Request;
 
@@ -25,8 +26,13 @@ class ReservacionController extends Controller
      */
     public function create()
     {
+        
+        $clientes = Cliente::where('estado', '=', 1)->get(); // obtener todos lo clientes activos
+        
+
+        
         #referencia a la ruta que se va ir
-        return view('reservacion.crear');
+        return view('reservacion.crear', compact('clientes'));
     }
 
     /**
@@ -71,6 +77,7 @@ class ReservacionController extends Controller
      */
     public function update(Request $request, Reservacion $reservacion)
     {
+        
         //
     }
 
