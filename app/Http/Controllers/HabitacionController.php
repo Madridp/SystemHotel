@@ -24,7 +24,12 @@ class HabitacionController extends Controller
      */
     public function create()
     {
-        return view('habitacion.create');
+        #referencia a la ruta que se va ir
+        return view('habitacion.crear', [
+            'activePage' => 'habitacion-crear'
+
+
+        ]);
     }
 
     /**

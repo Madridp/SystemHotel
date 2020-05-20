@@ -116,24 +116,47 @@
                 </ul>
         </li>
 
-        <!-- Nav Item - Habitaciones-->
+        <!-- Nav Item - Servicios-->
           <!-- Lista dentro de otra lista  -->
-          <li class="nav-item {{ Nav::isRoute('habitacion.create') }}">
+          <li class="nav-item {{ Nav::isRoute('servicio.create') }}">
             <!-- Item Principal -->
             <a class="nav-link" href="#pageSubmenuH" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 <i class="fas fa-fw fa-user"></i>
-                <span>{{ __('Habitaciones') }}</span>
+                <span>{{ __('Servicios') }}</span>
             </a>
                                      <!-- Hace referencia al href -->
                 <ul class="collapse list-unstyled" id="pageSubmenuH">
-                    <li class="nav-item {{ Nav::isRoute('habitacion.create') }}">
-                        <a class="nav-link" href="{{ route('habitacion.create') }}">
+                    <li class="nav-item {{ Nav::isRoute('servicio.index') }}">
+                        <a class="nav-link" href="{{ route('servicio.index') }}">
                             <i class="fas fa-fw fa-user"></i>
-                            <span>{{ __('Servicios') }}</span>
+                            <span>{{ __('Servicio a la Habitacion') }}</span>
                         </a>
                     </li>
-                    <li class="nav-item {{ Nav::isRoute('habitacion.index') }}">
-                        <a class="nav-link" href="{{ route('habitacion.index') }}">
+
+                   
+                </ul>
+        </li>
+
+        <!-- Nav Item - Servicios-->
+          <!-- Lista dentro de otra lista  -->
+          <li class="nav-item {{ Nav::isRoute('producto.create') }}">
+            <!-- Item Principal -->
+            <a class="nav-link" href="#pageSubmenuP" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Productos') }}</span>
+            </a>
+                                     <!-- Hace referencia al href -->
+                <ul class="collapse list-unstyled" id="pageSubmenuP">
+                    <li class="nav-item {{ Nav::isRoute('producto.create') }}">
+                        <a class="nav-link" href="{{ route('producto.create') }}">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>{{ __('Crear Nuevo') }}</span>
+                        </a>
+                    </li>
+
+
+                    <li class="nav-item {{ Nav::isRoute('producto.index') }}">
+                        <a class="nav-link" href="{{ route('producto.index') }}">
                             <i class="fas fa-fw fa-user"></i>
                             <span>{{ __('Consultar') }}</span>
                         </a>

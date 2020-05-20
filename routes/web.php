@@ -16,6 +16,7 @@ Route::get('/', function () {
 });
 
 
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -27,3 +28,7 @@ Route::put('/profile', 'ProfileController@update')->name('profile.update');
 Route::resource('reservacion', 'ReservacionController');
 Route::resource('cliente', 'ClienteController');
 Route::resource('habitacion', 'HabitacionController');
+Route::resource('servicio', 'ServicioController');
+Route::resource('producto', 'ProductoController');
+
+
