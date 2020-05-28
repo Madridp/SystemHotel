@@ -1,7 +1,11 @@
 @extends('layouts.admin', ['activePage' => 'cliente-index', 'titlePage' => __('Gestor de Clientes')])
 
 
+
 @section('main-content')
+
+
+
 <div class="content">
     <div class="container-fluid">
         <div class="row">
@@ -42,7 +46,7 @@
                             </div>
                         </div>
                         <div class="table-responsive">
-                            <table class="table">
+                            <table class="table" id="tabla">
                                 <thead class=" text-primary">
                                     <th>{{ __('Nombre') }}</th>
                                     <th>{{ __('Apellido') }}</th>
@@ -86,3 +90,4 @@
     </div>
 </div>
 @endsection
+

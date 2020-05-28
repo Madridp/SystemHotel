@@ -4,10 +4,10 @@
      <!-- Fonts -->
      <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
- 
+
      <!-- Styles -->
      <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
- 
+
     <!-- Latest compiled and minified CSS -->
     <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"-->
 
@@ -35,9 +35,10 @@
 
     <title>Sistema Hotel </title>
 
-   
+
     <!-- Favicon icono del la pestaña de la pagina-->
     <link href="{{ asset('img/iniciar.png') }}" rel="icon" type="image/png">
+    @yield('estilos')
 </head>
 <body id="page-top">
 
@@ -131,40 +132,84 @@
                     </li>
 
                 </ul>
-        </li>
+            </li>
 
-        <!-- Nav Item - Habitaciones-->
+
+
+        <!-- Nav Item - Servicios-->
+          <!-- Lista dentro de otra lista  -->
+          <li class="nav-item {{ Nav::isRoute('servicio.create') }}">
+            <!-- Item Principal -->
+            <a class="nav-link" href="#pageSubmenuH" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <i class="fas fa-fw fa-user"></i>
+                <span>{{ __('Servicios') }}</span>
+            </a>
+                                     <!-- Hace referencia al href -->
+                <ul class="collapse list-unstyled" id="pageSubmenuH">
+                    <li class="nav-item {{ Nav::isRoute('servicio.create') }}">
+                        <a class="nav-link" href="{{ route('servicio.create') }}">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>{{ __('Registrar Servicios') }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Nav::isRoute('servicio.index') }}">
+                        <a class="nav-link" href="{{ route('servicio.index') }}">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>{{ __('Ver Servicios') }}</span>
+                        </a>
+                    </li>
+                </ul>
+             </li>
+
+             <!-- Nav Item - HABITACION-->
           <!-- Lista dentro de otra lista  -->
           <li class="nav-item {{ Nav::isRoute('habitacion.create') }}">
             <!-- Item Principal -->
-            <a class="nav-link" href="#pageSubmenuH" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+            <a class="nav-link" href="#pageSubmenuHa" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 <i class="fas fa-fw fa-user"></i>
                 <span>{{ __('Habitaciones') }}</span>
             </a>
                                      <!-- Hace referencia al href -->
-                <ul class="collapse list-unstyled" id="pageSubmenuH">
+                <ul class="collapse list-unstyled" id="pageSubmenuHa">
                     <li class="nav-item {{ Nav::isRoute('habitacion.create') }}">
                         <a class="nav-link" href="{{ route('habitacion.create') }}">
                             <i class="fas fa-fw fa-user"></i>
-                            <span>{{ __('Servicios') }}</span>
+                            <span>{{ __('Registrar Habitacion') }}</span>
                         </a>
                     </li>
                     <li class="nav-item {{ Nav::isRoute('habitacion.index') }}">
                         <a class="nav-link" href="{{ route('habitacion.index') }}">
                             <i class="fas fa-fw fa-user"></i>
-                            <span>{{ __('Consultar') }}</span>
+                            <span>{{ __('Lista de Habitaciones') }}</span>
                         </a>
                     </li>
                 </ul>
-        </li>
+             </li>
 
-
-          <!-- Nav Item - Reportes -->
-          <li class="nav-item {{ Nav::isRoute('') }}">
-            <a class="nav-link" href="#">
+         <!-- Nav Item - Reportes-->
+          <!-- Lista dentro de otra lista  -->
+          <li class="nav-item {{ Nav::isRoute('cliente.reporte') }}">
+            <!-- Item Principal -->
+            <a class="nav-link" href="#pageSubmenuRe" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                 <i class="fas fa-fw fa-user"></i>
                 <span>{{ __('Reportes') }}</span>
             </a>
+                                     <!-- Hace referencia al href -->
+                <ul class="collapse list-unstyled" id="pageSubmenuRe">
+                    <li class="nav-item {{ Nav::isRoute('cliente.reporte') }}">
+                        <a class="nav-link" href="{{ route('cliente.reporte') }}">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>{{ __('Reporte de Clientes') }}</span>
+                        </a>
+                    </li>
+                    <li class="nav-item {{ Nav::isRoute('reservacion.reporte') }}">
+                        <a class="nav-link" href="{{ route('reservacion.reporte') }}">
+                            <i class="fas fa-fw fa-user"></i>
+                            <span>{{ __('Reporte Reservaciones') }}</span>
+                        </a>
+                    </li>
+                </ul>
+             </li>
         </li>
 
 
@@ -226,7 +271,7 @@
                     <!-- Nav Item - User Information -->
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->name }}</span>
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">{{ Auth::user()->user }}</span>
                             <img class="img-profile rounded-circle" src="../img/perfil.png">
                         </a>
 

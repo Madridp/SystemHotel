@@ -1,4 +1,4 @@
-@extends('layouts.admin', ['activePage' => 'cliente-index', 'titlePage' => __('Gestor de Clientes')])
+@extends('layouts.admin', ['activePage' => 'servicio-index', 'titlePage' => __('Gestor de Servicios')])
 
 
 @section('main-content')
@@ -8,8 +8,8 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-primary">
-                        <h4 class="card-title ">{{ __('Habitaciones') }}</h4>
-                        <p class="card-category"> {{ __('Lista de Habitaciones') }}</p>
+                        <h4 class="card-title ">{{ __('Servicios') }}</h4>
+                        <p class="card-category"> {{ __('Lista de Servicios') }}</p>
                     </div>
                     <div class="card-body">
                         @if (session('exito'))
@@ -38,29 +38,29 @@
                         @endif
                         <div class="row">
                             <div class="col-12 text-right">
-                                <a href="{{ route('cliente.create') }}" class="btn btn-md btn-primary">{{ __('Agregar Nueva Habitacion') }}</a>
+                                <a href="{{ route('servicio.create') }}" class="btn btn-md btn-primary">{{ __('Crear nuevo Servicio') }}</a>
                             </div>
                         </div>
                         <div class="table-responsive">
                             <table class="table">
                                 <thead class=" text-primary">
-                                    <th>{{ __('Tipo Habitacion') }}</th>
-                                    <th>{{ __('Disponibilidad') }}</th>
-                                    <th>{{ __('Costo ') }}</th>
+                                    <th>{{ __('Nombre') }}</th>
+                                    <th>{{ __('Costo Unitario') }}</th>
+                                    <th>{{ __('Costo Total') }}</th>
                                     <th class="text-right">{{ __('Operaciones') }}</th>
                                 </thead>
                                 <tbody>
-                                    @foreach($habitaciones as $habitacion)
+                                    @foreach($servicios as $servicio)
                                     <tr>
                                         <!--imprimir datos en pantalla-->
-                                        <td>{{ $habitacion->tipo_habitacion ? $habitacion->tipo_habitacion ['descripcion']:'' }}</td>
-                                        <td>{{ $habitacion->disponibilidad_habitacion ? $habitacion->disponibilidad_habitacion ['descripcion']:'' }}</td>
-                                        <td>{{ $habitacion->disponibilidad }}</td>
+                                        <td>{{ $servicio->nombre }}</td>
+                                        <td>{{ $servicio->costo_unitario }}</td>
+                                        <td>{{ $servicio->costo_total }}</td>
                                         <td class="td-actions text-right">
-                                            <form action="{{ route('habitacion.destroy', $habitacion) }}" method="post">
+                                            <form action="{{ route('servicio.destroy', $servicio) }}" method="post">
                                                 @csrf
                                                 @method('delete')
-                                                <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('habitacion.edit', $habitacion) }}" data-original-title="" title="">
+                                                <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('servicio.edit', $servicio) }}" data-original-title="" title="">
                                                     <i class="material-icons" style="color: white; font-weight: bolder;" >Editar</i>
                                                     <div class="ripple-container"></div>
                                                 </a>

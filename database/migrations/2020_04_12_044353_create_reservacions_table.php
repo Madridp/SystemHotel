@@ -22,11 +22,14 @@ class CreateReservacionsTable extends Migration
             $table->integer('estado')->default(1);
             $table->unsignedBigInteger('id_usuario');
             $table->unsignedBigInteger('id_cliente');
+            $table->unsignedBigInteger('id_habitacion');
 
             $table->foreign('id_usuario')
                 ->references('id')->on('usuarios');
             $table->foreign('id_cliente')
                 ->references('id')->on('clientes');
+            $table->foreign('id_habitacion')
+                ->references('id')->on('habitacion');
         });
     }
 
