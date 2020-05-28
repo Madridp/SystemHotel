@@ -7,9 +7,9 @@
         justify-content: center;
     }
     #login {
-            
+
             padding: 10em;
-            
+
     }
     #font{
         font-size: 18px;
@@ -38,103 +38,69 @@
         </div>
     @endif
 
+            <!-- <img src="../img/bed.png" width="80" height="80"> -->
+            &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
 
-            <!-- Creando el primer enlace -->
-            <div style="height: 400px; ">
-                
-                <a id=boton1 class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                    <img src="../img/bed.png" width="80" height="80"> Habitacion -1 </a>
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -2 </a>
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -3 </a>
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -4 </a>    
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <br> <br>  <!-- Salto de linea -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -5 </a>
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -6 </a>
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                     <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -7 </a>
-                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -8 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <br> <br>  <!-- Salto de linea -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion -9 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-info btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 10 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 11 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 12 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <br> <br>  <!-- Salto de linea -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 13 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-danger btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 14 </a>
-                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                        &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                    <a class="btn btn-success btn-lg h-25 d-inline-block"  href="{{ route('reservacion.create') }}">
-                        <img src="../img/bed.png" width="80" height="80"> Habitacion 15 </a>
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 15 </a-->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 16 </a-->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 17 </a-->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-               <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 18 </a-->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-                <!--a class="btn btn-primary btn-user h-25 d-inline-block"  href="{{ route('reservacion.create') }}"> Habitacion 19 </a-->
-                    &nbsp; &nbsp; &nbsp; <!-- Espacio en el navegador -->
-            
-            </div>
-            
+            <style>
+                .reservada{
+                    background-color: darkcyan;
+                }
+
+                .disponible{
+                    background-color: green;
+                }
+
+                .ocupada{
+                    background-color: orangered;
+                }
+
+                .limpieza{
+                    background-color: aqua;
+                }
+            </style>
 
 
-            <!-- <form method="POST" action="{{ route('register') }}" class="user">
+            <div class="row">
+                @foreach($habitaciones as $habitacion)
+                <?php
+                    $estado_disponibilidad = "";
 
-                <div class="form-group ">
-                        <div class="col-lg-4 mb-4">
-                            <div class="card bg-primary text-white shadow">
-                                <div class="card-body">
-                                    <button type="submit" class="btn btn-primary btn-user btn-block">
-                                        {{ __('Habitacion') }}
-                                    </button>
-                                </div>
+                    switch ($habitacion->id_disponibilidad) {
+                        case 1:
+                            $estado_disponibilidad = "disponible";
+                            break;
+                        case 2:
+                            $estado_disponibilidad = "ocupada";
+                            break;
+                        case 3:
+                            $estado_disponibilidad = "reservada";
+                            break;
+                        case 4:
+                            $estado_disponibilidad = "limpieza";
+                            break;
+                        default:
+                            break;
+                    }
+                ?>
+                <div class="col-md-2 col-sm-7 mb-3">
+                    <div class="card "></div>
+                    <div class="card {{ $estado_disponibilidad }} ">
+                        <div class="card-body">
+                            <div class="card-title" >
+                                <h4 style="text-align: center">{{ __('Habitación #')}} {{  $habitacion->id }}</h4>
                             </div>
-                        </div>-->
 
+                            <img src="{{asset('img/bed.png')}}" width="100" height="100" class="card-img-top" alt="habitacion">
+                        </div>
+                        <div class="card-footer">
+                            {{ __('Estado: ') }}  {{ $habitacion->disponibilidad_habitacion ? $habitacion->disponibilidad_habitacion->descripcion : '' }}
+                            <div class="row">
+                               {{--<a href="{{ route('habitacion.show', $habitacion) }}">Ver habitación</a>--}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @endforeach
+            </div>
 
-
-
-
-    </div>
 @endsection

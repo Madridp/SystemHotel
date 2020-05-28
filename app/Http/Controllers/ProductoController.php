@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TipoHabitacion;
-use App\Cliente;
+use App\Producto;
 use Illuminate\Http\Request;
 
-class TipoHabitacionController extends Controller
+class ProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,11 @@ class TipoHabitacionController extends Controller
      */
     public function index()
     {
+        #referencia a la ruta que se va ir
+        return view('producto.index', [
+            'activePage' => 'servicio-crear'
 
+        ]);
     }
 
     /**
@@ -25,7 +28,11 @@ class TipoHabitacionController extends Controller
      */
     public function create()
     {
-        //
+         #referencia a la ruta que se va ir
+         return view('producto.nuevo_producto', [
+            'activePage' => 'servicio-crear'
+
+        ]);
     }
 
     /**
@@ -42,10 +49,10 @@ class TipoHabitacionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function show(TipoHabitacion $tipoHabitacion)
+    public function show(Producto $producto)
     {
         //
     }
@@ -53,10 +60,10 @@ class TipoHabitacionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function edit(TipoHabitacion $tipoHabitacion)
+    public function edit(Producto $producto)
     {
         //
     }
@@ -65,10 +72,10 @@ class TipoHabitacionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TipoHabitacion $tipoHabitacion)
+    public function update(Request $request, Producto $producto)
     {
         //
     }
@@ -76,10 +83,10 @@ class TipoHabitacionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Producto  $producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TipoHabitacion $tipoHabitacion)
+    public function destroy(Producto $producto)
     {
         //
     }

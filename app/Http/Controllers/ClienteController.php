@@ -21,9 +21,33 @@ class ClienteController extends Controller
 
         #todos los registros de los cliente
         #guarda en la variable clientes a todos los clientes
-        $clientes=Cliente::all();
+        $clientes=Cliente::where('estado', '=', 1)->get();
 
         return view('cliente.index', [
+            #creando una variable activePage con el valor cliente-index
+            #para saber en que opcionmenu estoy
+            'activePage' => 'cliente-index',
+            #creacion de la variable cliente
+            #mando a la vista la variable clientes
+            'clientes' => $clientes
+
+        ]);
+    }
+
+     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function reporte()
+    {
+        #referencia a la ruta que se va ir
+
+        #todos los registros de los cliente
+        #guarda en la variable clientes a todos los clientes
+        $clientes=Cliente::all();
+
+        return view('cliente.reporte', [
             #creando una variable activePage con el valor cliente-index
             #para saber en que opcionmenu estoy
             'activePage' => 'cliente-index',
@@ -48,6 +72,8 @@ class ClienteController extends Controller
 
         ]);
     }
+
+
 
     /**
      * Store a newly created resource in storage.
@@ -97,7 +123,7 @@ class ClienteController extends Controller
      */
     public function show(Cliente $cliente)
     {
-        //
+
     }
 
     /**
@@ -108,7 +134,8 @@ class ClienteController extends Controller
      */
     public function edit(Cliente $cliente)
     {
-        //
+        //return response()->json($agencia);
+        return view('cliente.edit', compact('cliente'));
     }
 
     /**
@@ -120,7 +147,35 @@ class ClienteController extends Controller
      */
     public function update(Request $request, Cliente $cliente)
     {
-        //
+         //return response()->json($cliente);
+        //return response()->json($request->all());
+
+        $this->validate($request, [
+            'nombre' => 'required|string|max:50',
+            'apellido' => 'required|string|max:50',
+            'telefono' => 'required|string|max:50',
+            'email' => 'required|string|max:50',
+
+            //'id_usuario' => 'required'
+        ], [
+          //  'nombre.required' => 'El campo nombre es obligatorio',
+            //'apellido.required' => 'El campo apellido es obligatorio',
+
+        ]);
+
+        DB::beginTransaction();
+
+        try{
+            $cliente->update($request->all());
+            DB::commit();
+            return redirect()->route('cliente.index')->with('exito', 'El cliente ha sido actualizado correctamente.');
+        }catch(Exception $e){
+            DB::rollBack();
+        }catch(Throwable $t){
+            DB::rollBack();
+        }
+
+        return redirect()->route('cliente.index')->with('error', 'No se pudo actualizar la informacion del cliente.');
     }
 
     /**
@@ -131,6 +186,11 @@ class ClienteController extends Controller
      */
     public function destroy(Cliente $cliente)
     {
-        //
+        $cliente->estado = 0;
+        $cliente->update();
+        return redirect()->route('cliente.index')->with('exito', 'Cliente eliminado correctamente.');
     }
+
+
+
 }

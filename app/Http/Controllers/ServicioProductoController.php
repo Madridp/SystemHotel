@@ -2,11 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\TipoHabitacion;
-use App\Cliente;
+use App\Servicio_Producto;
 use Illuminate\Http\Request;
 
-class TipoHabitacionController extends Controller
+class ServicioProductoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,7 +14,7 @@ class TipoHabitacionController extends Controller
      */
     public function index()
     {
-
+        //
     }
 
     /**
@@ -42,10 +41,10 @@ class TipoHabitacionController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Servicio_Producto  $servicio_Producto
      * @return \Illuminate\Http\Response
      */
-    public function show(TipoHabitacion $tipoHabitacion)
+    public function show(Servicio_Producto $servicio_Producto)
     {
         //
     }
@@ -53,10 +52,10 @@ class TipoHabitacionController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Servicio_Producto  $servicio_Producto
      * @return \Illuminate\Http\Response
      */
-    public function edit(TipoHabitacion $tipoHabitacion)
+    public function edit(Servicio_Producto $servicio_Producto)
     {
         //
     }
@@ -65,10 +64,10 @@ class TipoHabitacionController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Servicio_Producto  $servicio_Producto
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, TipoHabitacion $tipoHabitacion)
+    public function update(Request $request, Servicio_Producto $servicio_Producto)
     {
         //
     }
@@ -76,10 +75,10 @@ class TipoHabitacionController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\TipoHabitacion  $tipoHabitacion
+     * @param  \App\Servicio_Producto  $servicio_Producto
      * @return \Illuminate\Http\Response
      */
-    public function destroy(TipoHabitacion $tipoHabitacion)
+    public function destroy(Servicio_Producto $servicio_Producto)
     {
         //
     }

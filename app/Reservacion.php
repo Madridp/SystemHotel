@@ -38,7 +38,8 @@ class Reservacion extends Model
         'costo',
         'estado',
         'id_usuario',
-        'id_cliente'
+        'id_cliente',
+        'id_habitacion'
 
 
     ];
@@ -47,4 +48,21 @@ class Reservacion extends Model
     {
         return Carbon::parse(parent::fromDateTime($value))->format('Y-d-m H:i:s');
     }
+
+    //metodo para obtener todos los tipos de habitacionos asociados a la habitacion
+    public function cliente(){
+
+        //instancia             //modelo que hace relacion //campo fk de la tabla relacional //campo llave primaria
+         return $this->hasOne('App\Cliente', 'id', 'id_cliente');
+
+    }
+
+    //metodo para obtener todos los tipos de habitacionos asociados a la habitacion
+    public function habitacion(){
+
+        //instancia             //modelo que hace relacion //campo fk de la tabla relacional //campo llave primaria
+         return $this->hasOne('App\Habitacion', 'id', 'id_habitacion');
+
+    }
+
 }

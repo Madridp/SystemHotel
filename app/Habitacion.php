@@ -44,4 +44,21 @@ class Habitacion extends Model
     {
         return Carbon::parse(parent::fromDateTime($value))->format('Y-d-m H:i:s');
     }
+
+     //metodo para obtener todos los tipos de habitacionos asociados a la habitacion
+     public function tipo_habitacion(){
+
+        //instancia             //modelo que hace relacion //campo fk de la tabla relacional //campo llave primaria
+         return $this->hasOne('App\TipoHabitacion', 'id', 'id_tipo_habitacion');
+
+    }
+
+    //metodo para obtener todos los tipos de habitacionos asociados a la habitacion
+    public function disponibilidad_habitacion(){
+
+        //instancia             //modelo que hace relacion //campo fk de la tabla relacional //campo llave primaria
+         return $this->hasOne('App\Disponibilidad', 'id', 'id_disponibilidad');
+
+    }
+
 }
