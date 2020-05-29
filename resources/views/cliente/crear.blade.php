@@ -44,13 +44,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="nombre">Nombre<span class="small text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-user" name="nombre" placeholder="{{ __('Nombre') }}" value="{{ old('nombre') }}" required autofocus>
+                                        <input type="text" id="nombre" class="form-control form-control-user" name="nombre" placeholder="{{ __('Nombre') }}" value="{{ old('nombre') }}" required autofocus>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="last_name">Apellido<span class="small text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-user" name="apellido" placeholder="{{ __('Apellido') }}" value="{{ old('apellido') }}" required autofocus>
+                                        <input type="text" id="apellido" class="form-control form-control-user" name="apellido" placeholder="{{ __('Apellido') }}" value="{{ old('apellido') }}" required autofocus>
                                     </div>
                                 </div>
                             </div>
@@ -59,13 +59,13 @@
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="telefono">Telefono</label>
-                                        <input type="text" class="form-control form-control-user" name="telefono" placeholder="{{ __('Telefono') }}" value="{{ old('telefono') }}" required>
+                                        <input type="number" min="11111111" id="telefono" class="form-control form-control-user" name="telefono" placeholder="{{ __('Telefono') }}" value="{{ old('telefono') }}" required>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="email">Correo Electronico</label>
-                                        <input type="text" class="form-control form-control-user" name="email" placeholder="{{ __('ejemplo@.com') }}" value="{{ old('email') }}" required>
+                                        <input type="email" id="email" class="form-control form-control-user" name="email" placeholder="{{ __('ejemplo@.com') }}" value="{{ old('email') }}" required>
                                     </div>
                                 </div>
                             </div>
@@ -74,7 +74,7 @@
                                 <div class="col-lg-12">
                                     <div class="form-group focused">
                                         <label class="form-control-label" for="dpi">DPI<span class="small text-danger">*</span></label>
-                                        <input type="text" class="form-control form-control-user" name="dpi" placeholder="{{ __('DPI') }}" value="{{ old('dpi') }}" required autofocus>
+                                        <input type="number" min="1111111111111" id="dpi" class="form-control form-control-user" name="dpi" placeholder="{{ __('DPI') }}" value="{{ old('dpi') }}" required autofocus>
                                     </div>
                                 </div>
 
@@ -102,4 +102,10 @@
 
     </div>
 
+@endsection
+@section('javascript_extra')
+    <script>
+         
+
+    </script>
 @endsection
