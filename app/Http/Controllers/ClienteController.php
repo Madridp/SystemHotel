@@ -88,7 +88,7 @@ class ClienteController extends Controller
             'apellido' => 'required|string|max:50',
             'telefono' => 'required|string|max:50',
             'email' => 'required|string|max:50',
-            'dpi' => 'required|string|max:200',
+            'dpi' => 'required|string|max:50',
             'id_usuario' => 'required'
         ], [
             'nombre.required' => 'El campo nombre es obligatorio',
