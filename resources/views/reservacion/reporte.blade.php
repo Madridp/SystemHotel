@@ -133,9 +133,9 @@
                         orientation: 'landscape', // 'portrait', 'landscape'
                         pageSize: 'LETTER', // 'A5', ‘EXECUTIVE’, ‘FOLIO’, ‘LEGAL’, ‘LETTER’, ‘TABLOID’
                         pageMargins: [10, 10, 10, 10], // [left, top, right, bottom] or [horizontal, vertical] or just a number for equal margins
-                        title: 'Reporte',
+                        title: 'Reporte de Habitaciones Reservadas',
                         exportOptions: {
-                            columns: [0, 1, 2, 3, 4, 5], // :visible: para exportar columnas visibles
+                            columns: [0, 1, 2, 3, 4], // :visible: para exportar columnas visibles
                             modifier: {
                                 page: 'all' // current: para registros que se esten visualizando actualmente
                             }

@@ -91,3 +91,65 @@
 </div>
 @endsection
 
+@section('javascript_extra')
+    <script>
+        var tabla = $('#tabla').DataTable( {
+            "language": {
+                "lengthMenu": "Mostrar _MENU_ registros por pagina",
+                "zeroRecords": "No se encontraron registros",
+                "info": "Mostrando página _PAGE_/_PAGES_",
+                "infoEmpty": "Ningun registrado encontrado",
+                "infoFiltered": "(coincidencias de _MAX_ registros)",
+                "search": "Búsqueda",
+                "LoadingRecords": "Cargando ...",
+                "Processing": "Procesando...",
+                "paginate": {
+                    "previous": "<",
+                    "next": ">",
+                }
+            },
+            dom: 'Bfrtip',
+            buttons: [
+                {
+                    extend: 'pdfHtml5',
+                    text: 'Exportar como PDF',
+                    orientation: 'landscape', // 'portrait', 'landscape'
+                    pageSize: 'LETTER', // 'A5', ‘EXECUTIVE’, ‘FOLIO’, ‘LEGAL’, ‘LETTER’, ‘TABLOID’
+                    pageMargins: [10, 10, 10, 10], // [left, top, right, bottom] or [horizontal, vertical] or just a number for equal margins
+                    title: 'Reporte Agencia',
+                    exportOptions: {
+                        columns: [0, 1, 2], // :visible: para exportar columnas visibles
+                        modifier: {
+                            page: 'all' // current: para registros que se esten visualizando actualmente
+                        }
+                    },
+                    customize: function (doc) {
+                        // ajustar el 100% del ancho, la tabla exportada a pdf
+                        doc.content[1].table.widths = Array(doc.content[1].table.body[0].length + 1).join('*').split('');
+                        /*doc.content.splice(1, 0, {
+                            columns: [
+                                {
+                                    // margin: [0, 0, 0, 12], // margin: [izquierda, arriba, derecha, abajo]
+                                    margin: [0, 5], // margin: [horizontal, vertical]
+                                    alignment: 'left',
+                                    image: obtenerBase64(),
+                                    width: 140,
+                                    height: 100
+                                },
+                                {
+                                    margin: [10, 15],
+                                    text: 'Nombre de la empresa: ' + nombre_empresa + "\n" +
+                                        "Fecha del reporte: " + obtenerFechaDMY(new Date().toString()) + "\n" +
+                                        "Descripcion: _________________________________\n______________________________________________\n______________________________________________",
+                                    fontSize: 12
+                                }
+                            ]
+                        });*/
+                    }
+                },
+                'excel'
+            ]
+        });
+    </script>
+@endsection
+
